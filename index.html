@@ -659,7 +659,6 @@
             const rev = userData.reviews[b.title] || { rating: 0, comment: '' };
             currentRating = rev.rating;
             
-            // Reikna Y staðsetningu á skjánum út frá smellinum
             let clickY = 100;
             if (event && event.pageY) {
                 clickY = event.pageY;
@@ -708,9 +707,7 @@
             const modal = document.getElementById('desc-modal');
             const modalContent = document.getElementById('desc-modal-content');
             
-            // Staðsetja innihaldskassann nálægt smellinum á síðunni
             modalContent.style.marginTop = Math.max(20, clickY - 150) + 'px';
-            
             modal.classList.remove('hidden');
         }
 
@@ -754,7 +751,7 @@
             }
             userData.reviews[title] = { rating: currentRating, comment, date: new Date().toLocaleDateString('is-IS') };
             saveUserData(); 
-            openBookInfo(id, event); // Endurræsa gluggann á sama stað
+            openBookInfo(id, event); 
             updateStatsUI(); 
             renderBooks();
             showToast("Umsögnin þín hefur verið vistuð");
@@ -798,7 +795,6 @@
             const modal = document.getElementById('stop-confirm-modal');
             const modalContent = modal.querySelector('div');
             
-            // Staðsetja stop confirmation kassa við viðeigandi hæð
             modalContent.style.marginTop = Math.max(20, clickY - 150) + 'px';
             modal.classList.remove('hidden'); 
         }
