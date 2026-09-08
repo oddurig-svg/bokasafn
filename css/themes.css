@@ -1,0 +1,1894 @@
+/* BOKASAFN_THEME_SYSTEM */
+
+body {
+    --theme-bg: #f8fafc;
+    --theme-surface: #ffffff;
+    --theme-card: #ffffff;
+    --theme-text: #0f172a;
+    --theme-muted: #64748b;
+    --theme-border: #e2e8f0;
+    --theme-accent: #6366f1;
+
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+}
+
+/* LIGHT */
+body[data-theme="light"] {
+    --theme-bg: #f8fafc;
+    --theme-surface: #ffffff;
+    --theme-card: #ffffff;
+    --theme-text: #0f172a;
+    --theme-muted: #64748b;
+    --theme-border: #e2e8f0;
+    --theme-accent: #6366f1;
+}
+
+/* DARK GREEN */
+body[data-theme="green"] {
+    --theme-bg: #07130e;
+    --theme-surface: #0b1f16;
+    --theme-card: #10291d;
+    --theme-text: #ecfdf5;
+    --theme-muted: #a7f3d0;
+    --theme-border: #1d4732;
+    --theme-accent: #22c55e;
+}
+
+/* DARK */
+body[data-theme="dark"] {
+    --theme-bg: #09090b;
+    --theme-surface: #111113;
+    --theme-card: #18181b;
+    --theme-text: #f4f4f5;
+    --theme-muted: #a1a1aa;
+    --theme-border: #27272a;
+    --theme-accent: #6366f1;
+}
+
+/* DARK PURPLE */
+body[data-theme="purple"] {
+    --theme-bg: #0d0715;
+    --theme-surface: #160d21;
+    --theme-card: #21102f;
+    --theme-text: #faf5ff;
+    --theme-muted: #d8b4fe;
+    --theme-border: #42245c;
+    --theme-accent: #a855f7;
+}
+
+/* DARK ORANGE */
+body[data-theme="orange"] {
+    --theme-bg: #120b05;
+    --theme-surface: #1c1007;
+    --theme-card: #291609;
+    --theme-text: #fff7ed;
+    --theme-muted: #fed7aa;
+    --theme-border: #59300e;
+    --theme-accent: #f97316;
+}
+
+/* Main page background */
+body[data-theme] {
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+}
+
+/* Existing common Tailwind surfaces */
+body[data-theme="green"] .bg-white,
+body[data-theme="dark"] .bg-white,
+body[data-theme="purple"] .bg-white,
+body[data-theme="orange"] .bg-white {
+    background-color: var(--theme-surface) !important;
+}
+
+/* Book cards */
+body[data-theme="green"] .book-card,
+body[data-theme="dark"] .book-card,
+body[data-theme="purple"] .book-card,
+body[data-theme="orange"] .book-card {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* Main dark-theme text */
+body[data-theme="green"] .text-slate-900,
+body[data-theme="dark"] .text-slate-900,
+body[data-theme="purple"] .text-slate-900,
+body[data-theme="orange"] .text-slate-900 {
+    color: var(--theme-text) !important;
+}
+
+body[data-theme="green"] .text-slate-600,
+body[data-theme="dark"] .text-slate-600,
+body[data-theme="purple"] .text-slate-600,
+body[data-theme="orange"] .text-slate-600 {
+    color: var(--theme-muted) !important;
+}
+
+/* Inputs */
+body[data-theme="green"] input,
+body[data-theme="dark"] input,
+body[data-theme="purple"] input,
+body[data-theme="orange"] input {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* Theme picker */
+.theme-option {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 2px solid var(--theme-border);
+    background: var(--theme-card);
+    color: var(--theme-text);
+    cursor: pointer;
+    text-align: left;
+}
+
+.theme-option:hover {
+    border-color: var(--theme-accent);
+}
+
+.theme-option.active {
+    border-color: var(--theme-accent);
+}
+
+/* Appearance panel */
+#appearance-panel {
+    background: var(--theme-surface);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+/* THEME OVERRIDES */
+body[data-theme="green"] .bg-slate-50,
+body[data-theme="green"] .bg-slate-100,
+body[data-theme="dark"] .bg-slate-50,
+body[data-theme="dark"] .bg-slate-100,
+body[data-theme="purple"] .bg-slate-50,
+body[data-theme="purple"] .bg-slate-100,
+body[data-theme="orange"] .bg-slate-50,
+body[data-theme="orange"] .bg-slate-100 {
+    background-color: var(--theme-bg) !important;
+}
+
+body[data-theme="green"] .bg-white,
+body[data-theme="dark"] .bg-white,
+body[data-theme="purple"] .bg-white,
+body[data-theme="orange"] .bg-white {
+    background-color: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+}
+
+body[data-theme="green"] .book-card,
+body[data-theme="dark"] .book-card,
+body[data-theme="purple"] .book-card,
+body[data-theme="orange"] .book-card {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme="green"] .text-slate-900,
+body[data-theme="dark"] .text-slate-900,
+body[data-theme="purple"] .text-slate-900,
+body[data-theme="orange"] .text-slate-900 {
+    color: var(--theme-text) !important;
+}
+
+body[data-theme="green"] .text-slate-600,
+body[data-theme="dark"] .text-slate-600,
+body[data-theme="purple"] .text-slate-600,
+body[data-theme="orange"] .text-slate-600 {
+    color: var(--theme-muted) !important;
+}
+
+body[data-theme="green"] .border-slate-200,
+body[data-theme="dark"] .border-slate-200,
+body[data-theme="purple"] .border-slate-200,
+body[data-theme="orange"] .border-slate-200 {
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme="green"] .shimmer-placeholder,
+body[data-theme="dark"] .shimmer-placeholder,
+body[data-theme="purple"] .shimmer-placeholder,
+body[data-theme="orange"] .shimmer-placeholder {
+    background: linear-gradient(
+        90deg,
+        var(--theme-surface) 25%,
+        var(--theme-border) 50%,
+        var(--theme-surface) 75%
+    ) !important;
+    background-size: 200% 100%;
+}
+
+body[data-theme="green"] #timer-widget,
+body[data-theme="dark"] #timer-widget,
+body[data-theme="purple"] #timer-widget,
+body[data-theme="orange"] #timer-widget {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme="green"] input,
+body[data-theme="dark"] input,
+body[data-theme="purple"] input,
+body[data-theme="orange"] input {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme="green"]::before,
+body[data-theme="dark"]::before,
+body[data-theme="purple"]::before,
+body[data-theme="orange"]::before {
+    background: var(--theme-bg) !important;
+}
+
+body[data-theme="green"],
+body[data-theme="dark"],
+body[data-theme="purple"],
+body[data-theme="orange"] {
+    color-scheme: dark;
+}
+
+body[data-theme="light"] {
+    color-scheme: light;
+}
+
+/* TOP BAR / NAVIGATION */
+body[data-theme="green"] header,
+body[data-theme="dark"] header,
+body[data-theme="purple"] header,
+body[data-theme="orange"] header {
+    background-color: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme="green"] nav,
+body[data-theme="dark"] nav,
+body[data-theme="purple"] nav,
+body[data-theme="orange"] nav {
+    background-color: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme="green"] header *,
+body[data-theme="dark"] header *,
+body[data-theme="purple"] header *,
+body[data-theme="orange"] header * {
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme="green"] header .text-slate-900,
+body[data-theme="dark"] header .text-slate-900,
+body[data-theme="purple"] header .text-slate-900,
+body[data-theme="orange"] header .text-slate-900 {
+    color: var(--theme-text) !important;
+}
+
+body[data-theme="green"] header .text-slate-500,
+body[data-theme="dark"] header .text-slate-500,
+body[data-theme="purple"] header .text-slate-500,
+body[data-theme="orange"] header .text-slate-500 {
+    color: var(--theme-muted) !important;
+}
+
+body[data-theme="green"] .backdrop-blur-md,
+body[data-theme="dark"] .backdrop-blur-md,
+body[data-theme="purple"] .backdrop-blur-md,
+body[data-theme="orange"] .backdrop-blur-md {
+    background-color: color-mix(in srgb, var(--theme-surface) 90%, transparent) !important;
+}
+
+/* ===================================================== */
+/* COMPLETE BOKASAFN THEME OVERRIDES */
+/* ===================================================== */
+
+body[data-theme] {
+    --theme-shadow: color-mix(in srgb, var(--theme-accent) 22%, transparent);
+}
+
+/* ---------- TOP BAR ---------- */
+body[data-theme] header,
+body[data-theme] nav {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* ---------- LOGO / ICON ---------- */
+body[data-theme] .logo-icon,
+body[data-theme] #logo-icon,
+body[data-theme] header .fa-book {
+    color: var(--theme-accent) !important;
+}
+
+body[data-theme] .logo-glow,
+body[data-theme] #logo-glow {
+    background: var(--theme-accent) !important;
+    box-shadow: 0 0 35px var(--theme-shadow) !important;
+}
+
+/* ---------- ALL TEXT ---------- */
+body[data-theme] .text-slate-900 {
+    color: var(--theme-text) !important;
+}
+
+body[data-theme] .text-slate-800 {
+    color: var(--theme-text) !important;
+}
+
+body[data-theme] .text-slate-700,
+body[data-theme] .text-slate-600,
+body[data-theme] .text-slate-500 {
+    color: var(--theme-muted) !important;
+}
+
+/* ---------- CARDS / PANELS ---------- */
+body[data-theme] .bg-white,
+body[data-theme] .bg-white\/95,
+body[data-theme] .bg-white\/90 {
+    background-color: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+}
+
+body[data-theme] .book-card {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+    box-shadow: 0 8px 25px -10px var(--theme-shadow);
+}
+
+/* ---------- PAGE BACKGROUND ---------- */
+body[data-theme]::before {
+    background: var(--theme-bg) !important;
+}
+
+/* ---------- INPUTS ---------- */
+body[data-theme] input,
+body[data-theme] textarea,
+body[data-theme] select {
+    background: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] input::placeholder,
+body[data-theme] textarea::placeholder {
+    color: var(--theme-muted) !important;
+}
+
+/* ---------- CATEGORY / NAV BUTTONS ---------- */
+body[data-theme] button.bg-indigo-600,
+body[data-theme] button.bg-indigo-500,
+body[data-theme] .bg-indigo-600,
+body[data-theme] .bg-indigo-500 {
+    background-color: var(--theme-accent) !important;
+    color: white !important;
+}
+
+body[data-theme] button.bg-indigo-50,
+body[data-theme] .bg-indigo-50 {
+    background-color: color-mix(in srgb, var(--theme-accent) 14%, var(--theme-surface)) !important;
+    color: var(--theme-accent) !important;
+}
+
+body[data-theme] .text-indigo-600,
+body[data-theme] .text-indigo-500,
+body[data-theme] .text-indigo-400 {
+    color: var(--theme-accent) !important;
+}
+
+body[data-theme] .border-indigo-500,
+body[data-theme] .border-indigo-600 {
+    border-color: var(--theme-accent) !important;
+}
+
+/* ---------- HOVER STATES ---------- */
+body[data-theme] .hover\:bg-indigo-600:hover,
+body[data-theme] .hover\:bg-indigo-500:hover {
+    background-color: var(--theme-accent) !important;
+    filter: brightness(1.12);
+}
+
+body[data-theme] .hover\:text-indigo-600:hover,
+body[data-theme] .hover\:text-indigo-500:hover {
+    color: var(--theme-accent) !important;
+}
+
+/* ---------- ICONS ---------- */
+body[data-theme] .fa-book,
+body[data-theme] .fa-palette,
+body[data-theme] .fa-search,
+body[data-theme] .fa-filter {
+    color: var(--theme-accent) !important;
+}
+
+/* ---------- MÆLIR ÞÚ MEÐ BÓK ---------- */
+body[data-theme] .recommend-book,
+body[data-theme] #recommend-book,
+body[data-theme] [id*="recommend"],
+body[data-theme] [id*="recommendation"] {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] .recommend-book button,
+body[data-theme] #recommend-book button,
+body[data-theme] [id*="recommend"] button {
+    background: var(--theme-accent) !important;
+    color: white !important;
+}
+
+/* ---------- GREEN SUCCESS COLORS ---------- */
+body[data-theme] .bg-emerald-600,
+body[data-theme] .bg-emerald-500 {
+    background-color: var(--theme-accent) !important;
+    color: white !important;
+}
+
+body[data-theme] .text-emerald-500,
+body[data-theme] .text-emerald-600 {
+    color: var(--theme-accent) !important;
+}
+
+/* ---------- HEART / WISHLIST ---------- */
+body[data-theme] .text-rose-500,
+body[data-theme] .text-red-500 {
+    color: var(--theme-accent) !important;
+}
+
+/* ---------- AMBER / ORANGE ---------- */
+body[data-theme] .bg-amber-400,
+body[data-theme] .bg-amber-500,
+body[data-theme] .bg-orange-500 {
+    background-color: var(--theme-accent) !important;
+}
+
+body[data-theme] .text-amber-400,
+body[data-theme] .text-amber-500,
+body[data-theme] .text-orange-500 {
+    color: var(--theme-accent) !important;
+}
+
+/* ---------- TIMER ---------- */
+body[data-theme] #timer-widget {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] .timer-active-glow {
+    border-color: var(--theme-accent) !important;
+    box-shadow: 0 0 35px var(--theme-shadow) !important;
+}
+
+/* ---------- BOOK IMAGE GLOW ---------- */
+body[data-theme] .book-img-container {
+    box-shadow: 0 5px 18px -6px var(--theme-shadow) !important;
+}
+
+/* ---------- SHIMMER ---------- */
+body[data-theme] .shimmer-placeholder {
+    background: linear-gradient(90deg,var(--theme-surface) 25%,var(--theme-border) 50%,var(--theme-surface) 75%) !important;
+    background-size: 200% 100% !important;
+}
+
+/* ---------- MODALS ---------- */
+body[data-theme] .bg-white.rounded-3xl,
+body[data-theme] .bg-white.rounded-2xl {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* ---------- THEME SELECTOR ---------- */
+body[data-theme] #appearance-panel {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+    box-shadow: 0 20px 60px -20px var(--theme-shadow) !important;
+}
+
+body[data-theme] .theme-option {
+    background: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] .theme-option.active {
+    border-color: var(--theme-accent) !important;
+    box-shadow: 0 0 0 2px var(--theme-shadow) !important;
+}
+
+/* ---------- FOCUS ---------- */
+body[data-theme] input:focus,
+body[data-theme] textarea:focus,
+body[data-theme] select:focus {
+    border-color: var(--theme-accent) !important;
+    box-shadow: 0 0 0 3px var(--theme-shadow) !important;
+    outline: none !important;
+}
+
+/* ---------- DARK THEMES ---------- */
+body[data-theme="green"],
+body[data-theme="dark"],
+body[data-theme="purple"],
+body[data-theme="orange"] {
+    color-scheme: dark;
+}
+
+body[data-theme="light"] {
+    color-scheme: light;
+}
+
+/* ===== LOGO ===== */
+body[data-theme] header .bg-indigo-600,
+body[data-theme] header .bg-indigo-500,
+body[data-theme] header .bg-gradient-to-br,
+body[data-theme] header .bg-gradient-to-tr {
+    background: var(--theme-accent) !important;
+}
+
+/* Logo icon */
+body[data-theme] header i.fa-book,
+body[data-theme] header .fa-book-open,
+body[data-theme] header .fa-book-open-reader {
+    color: #fff !important;
+}
+
+/* Logo glow / shadow */
+body[data-theme] header .shadow-indigo-500\/30,
+body[data-theme] header .shadow-indigo-500\/20,
+body[data-theme] header [class*="shadow-indigo"] {
+    box-shadow: 0 0 30px color-mix(in srgb, var(--theme-accent) 45%, transparent) !important;
+}
+
+/* ===== PLAY BUTTON / TIMER BUTTON ===== */
+body[data-theme] #timer-widget button,
+body[data-theme] button .fa-play,
+body[data-theme] .fa-play {
+    color: #fff !important;
+}
+
+body[data-theme] #timer-widget .bg-gradient-to-tr,
+body[data-theme] #timer-widget .bg-gradient-to-br,
+body[data-theme] #timer-widget .bg-indigo-600,
+body[data-theme] #timer-widget .bg-indigo-500 {
+    background: var(--theme-accent) !important;
+}
+
+body[data-theme] #timer-widget .shadow-lg,
+body[data-theme] #timer-widget [class*="shadow-indigo"] {
+    box-shadow: 0 10px 25px -5px color-mix(in srgb, var(--theme-accent) 45%, transparent) !important;
+}
+
+/* ===== MÆLIR ÞÚ MEÐ BÓK? ===== */
+body[data-theme] .bg-gradient-to-br.from-amber-500,
+body[data-theme] .bg-gradient-to-br.from-amber-500.to-orange-500 {
+    background: var(--theme-accent) !important;
+}
+
+body[data-theme] [class*="from-amber-500"][class*="to-orange-500"] {
+    background: var(--theme-accent) !important;
+    color: #fff !important;
+}
+
+/* Recommendation button */
+body[data-theme] [class*="from-amber-500"] button,
+body[data-theme] [class*="to-orange-500"] button {
+    background: var(--theme-accent) !important;
+    color: #fff !important;
+}
+
+/* Recommendation section glow */
+body[data-theme] [class*="from-amber-500"][class*="to-orange-500"] {
+    box-shadow: 0 15px 35px -12px color-mix(in srgb, var(--theme-accent) 45%, transparent) !important;
+}
+
+/* ===== GLOBAL THEME GLOW ===== */
+body[data-theme] [class*="shadow-indigo-"] {
+    --tw-shadow-color: var(--theme-accent) !important;
+    box-shadow: 0 10px 30px -10px color-mix(in srgb, var(--theme-accent) 40%, transparent) !important;
+}
+
+body[data-theme] [class*="shadow-purple-"] {
+    box-shadow: 0 10px 30px -10px color-mix(in srgb, var(--theme-accent) 40%, transparent) !important;
+}
+
+/* =========================================================
+   FINAL THEME OVERRIDES
+   Makes ALL important UI elements follow the selected theme
+   ========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+body[data-theme] {
+    background-color: var(--theme-bg) !important;
+    color: var(--theme-text) !important;
+}
+
+/* Background glow behind the page/logo */
+body[data-theme]::before {
+    background:
+        radial-gradient(
+            circle at top left,
+            color-mix(in srgb, var(--theme-accent) 20%, transparent),
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            color-mix(in srgb, var(--theme-accent) 15%, transparent),
+            transparent 45%
+        ) !important;
+}
+
+/* ---------- HEADER / TOP BAR ---------- */
+
+body[data-theme] header,
+body[data-theme] nav,
+body[data-theme] .glass-card {
+    background-color: color-mix(
+        in srgb,
+        var(--theme-surface) 88%,
+        transparent
+    ) !important;
+
+    color: var(--theme-text) !important;
+
+    border-color: var(--theme-border) !important;
+}
+
+/* ---------- LOGO / ICON ---------- */
+
+/* Any main logo/icon using indigo/purple/pink */
+body[data-theme] header i,
+body[data-theme] header .fa-book,
+body[data-theme] header .fa-book-open,
+body[data-theme] header .fa-book-open-reader {
+    color: var(--theme-accent) !important;
+}
+
+/* Logo glow */
+body[data-theme] header .shadow-indigo-500\/30,
+body[data-theme] header .shadow-indigo-500\/20,
+body[data-theme] header [class*="shadow-indigo"] {
+    box-shadow:
+        0 10px 30px
+        color-mix(in srgb, var(--theme-accent) 30%, transparent)
+        !important;
+}
+
+/* Logo background */
+body[data-theme] header [class*="bg-indigo-"],
+body[data-theme] header [class*="from-indigo-"],
+body[data-theme] header [class*="to-purple-"] {
+    background: var(--theme-accent) !important;
+}
+
+/* ---------- ALL ACCENT ICONS ---------- */
+
+body[data-theme] .text-indigo-400,
+body[data-theme] .text-indigo-500,
+body[data-theme] .text-indigo-600,
+body[data-theme] .text-indigo-700,
+body[data-theme] .text-purple-400,
+body[data-theme] .text-purple-500,
+body[data-theme] .text-purple-600,
+body[data-theme] .text-pink-400,
+body[data-theme] .text-pink-500,
+body[data-theme] .text-pink-600 {
+    color: var(--theme-accent) !important;
+}
+
+/* ---------- PLAY / TIMER BUTTON ---------- */
+
+body[data-theme] #timer-widget {
+    background:
+        linear-gradient(
+            135deg,
+            var(--theme-surface),
+            var(--theme-card)
+        ) !important;
+
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] #timer-widget button {
+    background: var(--theme-accent) !important;
+    color: white !important;
+
+    box-shadow:
+        0 8px 25px
+        color-mix(in srgb, var(--theme-accent) 30%, transparent) !important;
+}
+
+body[data-theme] .timer-active-glow {
+    border-color: var(--theme-accent) !important;
+
+    box-shadow:
+        0 0 35px
+        color-mix(in srgb, var(--theme-accent) 35%, transparent) !important;
+}
+
+/* ---------- "MÆLIR ÞÚ MEÐ BÓK?" BUTTON ---------- */
+
+/* Catch orange/amber/indigo/purple gradient buttons */
+body[data-theme] [class*="from-amber-"],
+body[data-theme] [class*="from-orange-"],
+body[data-theme] [class*="from-indigo-"],
+body[data-theme] [class*="from-purple-"] {
+    background: var(--theme-accent) !important;
+}
+
+/* Recommendation button glow */
+body[data-theme] [class*="shadow-amber"],
+body[data-theme] [class*="shadow-orange"],
+body[data-theme] [class*="shadow-indigo"],
+body[data-theme] [class*="shadow-purple"] {
+    box-shadow:
+        0 10px 30px
+        color-mix(in srgb, var(--theme-accent) 25%, transparent) !important;
+}
+
+/* ---------- CATEGORY BUTTONS ---------- */
+
+body[data-theme] .category-button,
+body[data-theme] button[class*="category"] {
+    border-color: var(--theme-border) !important;
+}
+
+/* Selected category */
+body[data-theme] .category-button.active,
+body[data-theme] button.active {
+    background-color: var(--theme-accent) !important;
+    border-color: var(--theme-accent) !important;
+    color: white !important;
+}
+
+/* ---------- LESTURINN MINN ---------- */
+
+/* Whole reading page */
+body[data-theme] #reading-page,
+body[data-theme] #my-reading,
+body[data-theme] [id*="reading"],
+body[data-theme] [id*="lestur"] {
+    color: var(--theme-text) !important;
+}
+
+/* Cards inside Lesturinn minn */
+body[data-theme] #reading-page .bg-white,
+body[data-theme] #my-reading .bg-white,
+body[data-theme] [id*="reading"] .bg-white,
+body[data-theme] [id*="lestur"] .bg-white {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* Reading page text */
+body[data-theme] #reading-page .text-slate-900,
+body[data-theme] #my-reading .text-slate-900,
+body[data-theme] [id*="reading"] .text-slate-900,
+body[data-theme] [id*="lestur"] .text-slate-900 {
+    color: var(--theme-text) !important;
+}
+
+body[data-theme] #reading-page .text-slate-500,
+body[data-theme] #reading-page .text-slate-600,
+body[data-theme] #my-reading .text-slate-500,
+body[data-theme] #my-reading .text-slate-600,
+body[data-theme] [id*="reading"] .text-slate-500,
+body[data-theme] [id*="reading"] .text-slate-600,
+body[data-theme] [id*="lestur"] .text-slate-500,
+body[data-theme] [id*="lestur"] .text-slate-600 {
+    color: var(--theme-muted) !important;
+}
+
+/* Reading progress */
+body[data-theme] .bg-indigo-600,
+body[data-theme] .bg-indigo-500 {
+    background-color: var(--theme-accent) !important;
+}
+
+/* Reading progress glow */
+body[data-theme] .shadow-indigo-100,
+body[data-theme] .shadow-indigo-200 {
+    box-shadow:
+        0 8px 25px
+        color-mix(in srgb, var(--theme-accent) 25%, transparent) !important;
+}
+
+/* ---------- WISHLIST / READ BUTTONS ---------- */
+
+body[data-theme] .bg-rose-500,
+body[data-theme] .bg-rose-600,
+body[data-theme] .bg-emerald-500,
+body[data-theme] .bg-emerald-600 {
+    background-color: var(--theme-accent) !important;
+}
+
+/* ---------- MODALS ---------- */
+
+body[data-theme] .bg-white.rounded-3xl,
+body[data-theme] .bg-white.rounded-2xl,
+body[data-theme] .bg-white.rounded-xl {
+    background-color: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* ---------- INPUTS ---------- */
+
+body[data-theme] input,
+body[data-theme] textarea,
+body[data-theme] select {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] input::placeholder,
+body[data-theme] textarea::placeholder {
+    color: var(--theme-muted) !important;
+}
+
+/* ---------- GENERAL BUTTONS ---------- */
+
+body[data-theme] button {
+    transition:
+        background-color .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        box-shadow .2s ease;
+}
+
+/* Indigo buttons */
+body[data-theme] button.bg-indigo-500,
+body[data-theme] button.bg-indigo-600,
+body[data-theme] button.bg-purple-500,
+body[data-theme] button.bg-purple-600 {
+    background-color: var(--theme-accent) !important;
+    border-color: var(--theme-accent) !important;
+    color: white !important;
+}
+
+/* ---------- BOOK CARDS ---------- */
+
+body[data-theme] .book-card {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+}
+
+body[data-theme] .book-card h3 {
+    color: var(--theme-text) !important;
+}
+
+body[data-theme] .book-card p {
+    color: var(--theme-accent) !important;
+}
+
+/* ---------- SHIMMER ---------- */
+
+body[data-theme] .shimmer-placeholder {
+    background:
+        linear-gradient(
+            90deg,
+            var(--theme-surface) 25%,
+            var(--theme-border) 50%,
+            var(--theme-surface) 75%
+        ) !important;
+
+    background-size: 200% 100%;
+}
+
+/* ---------- LINKS ---------- */
+
+body[data-theme] a {
+    color: var(--theme-accent);
+}
+
+/* ---------- APPEARANCE PANEL ---------- */
+
+body[data-theme] #appearance-panel {
+    background-color: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* ---------- THEME OPTION ---------- */
+
+body[data-theme] .theme-option {
+    background-color: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] .theme-option:hover,
+body[data-theme] .theme-option.active {
+    border-color: var(--theme-accent) !important;
+}
+
+body[data-theme] .theme-option.active {
+    box-shadow:
+        0 0 0 2px
+        color-mix(in srgb, var(--theme-accent) 20%, transparent);
+}
+
+/* ---------- REMOVE OLD PURPLE GLOWS ---------- */
+
+body[data-theme] [class*="shadow-purple"],
+body[data-theme] [class*="shadow-indigo"],
+body[data-theme] [class*="shadow-pink"] {
+    --tw-shadow-color: color-mix(
+        in srgb,
+        var(--theme-accent) 30%,
+        transparent
+    ) !important;
+}
+
+/* ---------- DARK THEMES ---------- */
+
+body[data-theme="green"],
+body[data-theme="dark"],
+body[data-theme="purple"],
+body[data-theme="orange"] {
+    color-scheme: dark;
+}
+
+body[data-theme="light"] {
+    color-scheme: light;
+}
+
+/* =========================================================
+   RECOMMEND A BOOK
+   ========================================================= */
+
+/* Recommendation section/card */
+body[data-theme] #recommendation-section,
+body[data-theme] [id*="recommend"] {
+    color: var(--theme-text) !important;
+}
+
+/* Recommendation button — force the whole button to theme accent */
+body[data-theme] #recommendation-section button,
+body[data-theme] [id*="recommend"] button {
+    background: var(--theme-accent) !important;
+    color: #ffffff !important;
+    border-color: var(--theme-accent) !important;
+
+    box-shadow:
+        0 10px 30px
+        color-mix(in srgb, var(--theme-accent) 35%, transparent) !important;
+}
+
+/* If the recommendation button is a gradient */
+body[data-theme] #recommendation-section button[class*="gradient"],
+body[data-theme] [id*="recommend"] button[class*="gradient"] {
+    background: var(--theme-accent) !important;
+}
+
+/* Recommendation icon */
+body[data-theme] #recommendation-section i,
+body[data-theme] [id*="recommend"] i {
+    color: #ffffff !important;
+}
+
+/* Recommendation card */
+body[data-theme] #recommendation-section .bg-white,
+body[data-theme] [id*="recommend"] .bg-white {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+
+/* =========================================================
+   "MÍNÚTUR OG SEKÚNDUR" / READING TIMER
+   ========================================================= */
+
+/* Timer widget itself */
+body[data-theme] #timer-widget {
+    background: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* Timer numbers */
+body[data-theme] #timer-widget .text-indigo-600,
+body[data-theme] #timer-widget .text-indigo-500,
+body[data-theme] #timer-widget .text-purple-600,
+body[data-theme] #timer-widget .text-purple-500 {
+    color: var(--theme-accent) !important;
+}
+
+/* Timer labels */
+body[data-theme] #timer-widget .text-slate-400,
+body[data-theme] #timer-widget .text-slate-500,
+body[data-theme] #timer-widget .text-slate-600 {
+    color: var(--theme-muted) !important;
+}
+
+/* Play button */
+body[data-theme] #timer-widget button {
+    background: var(--theme-accent) !important;
+    color: #ffffff !important;
+    border-color: var(--theme-accent) !important;
+
+    box-shadow:
+        0 8px 25px
+        color-mix(in srgb, var(--theme-accent) 35%, transparent) !important;
+}
+
+/* Timer active state */
+body[data-theme] #timer-widget.timer-active-glow,
+body[data-theme] .timer-active-glow {
+    border-color: var(--theme-accent) !important;
+
+    box-shadow:
+        0 0 35px
+        color-mix(in srgb, var(--theme-accent) 40%, transparent) !important;
+}
+
+
+/* =========================================================
+   MY GOALS / MÍN MARKMIÐ
+   ========================================================= */
+
+/* Entire goals page */
+body[data-theme] #goals-page,
+body[data-theme] #goals,
+body[data-theme] [id*="goal"],
+body[data-theme] [id*="markmið"] {
+    color: var(--theme-text) !important;
+}
+
+/* Goal cards */
+body[data-theme] #goals-page .bg-white,
+body[data-theme] #goals .bg-white,
+body[data-theme] [id*="goal"] .bg-white,
+body[data-theme] [id*="markmið"] .bg-white {
+    background: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* Goal headings */
+body[data-theme] #goals-page .text-slate-900,
+body[data-theme] #goals .text-slate-900,
+body[data-theme] [id*="goal"] .text-slate-900,
+body[data-theme] [id*="markmið"] .text-slate-900 {
+    color: var(--theme-text) !important;
+}
+
+/* Goal descriptions */
+body[data-theme] #goals-page .text-slate-500,
+body[data-theme] #goals-page .text-slate-600,
+body[data-theme] #goals .text-slate-500,
+body[data-theme] #goals .text-slate-600,
+body[data-theme] [id*="goal"] .text-slate-500,
+body[data-theme] [id*="goal"] .text-slate-600,
+body[data-theme] [id*="markmið"] .text-slate-500,
+body[data-theme] [id*="markmið"] .text-slate-600 {
+    color: var(--theme-muted) !important;
+}
+
+/* Goal progress bars */
+body[data-theme] #goals-page .bg-indigo-500,
+body[data-theme] #goals-page .bg-indigo-600,
+body[data-theme] #goals .bg-indigo-500,
+body[data-theme] #goals .bg-indigo-600,
+body[data-theme] [id*="goal"] .bg-indigo-500,
+body[data-theme] [id*="goal"] .bg-indigo-600,
+body[data-theme] [id*="markmið"] .bg-indigo-500,
+body[data-theme] [id*="markmið"] .bg-indigo-600 {
+    background: var(--theme-accent) !important;
+}
+
+/* Goal buttons */
+body[data-theme] #goals-page button,
+body[data-theme] #goals button,
+body[data-theme] [id*="goal"] button,
+body[data-theme] [id*="markmið"] button {
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+
+/* Goal accent buttons */
+body[data-theme] #goals-page button.bg-indigo-500,
+body[data-theme] #goals-page button.bg-indigo-600,
+body[data-theme] #goals button.bg-indigo-500,
+body[data-theme] #goals button.bg-indigo-600,
+body[data-theme] [id*="goal"] button.bg-indigo-500,
+body[data-theme] [id*="goal"] button.bg-indigo-600,
+body[data-theme] [id*="markmið"] button.bg-indigo-500,
+body[data-theme] [id*="markmið"] button.bg-indigo-600 {
+    background: var(--theme-accent) !important;
+    color: #ffffff !important;
+    border-color: var(--theme-accent) !important;
+}
+
+
+/* =========================================================
+   UNIVERSAL THEME COLORS FOR COMMON UI
+   ========================================================= */
+
+body[data-theme] .text-indigo-400,
+body[data-theme] .text-indigo-500,
+body[data-theme] .text-indigo-600,
+body[data-theme] .text-purple-400,
+body[data-theme] .text-purple-500,
+body[data-theme] .text-purple-600 {
+    color: var(--theme-accent) !important;
+}
+
+/* Accent backgrounds */
+body[data-theme] .bg-indigo-500,
+body[data-theme] .bg-indigo-600,
+body[data-theme] .bg-purple-500,
+body[data-theme] .bg-purple-600 {
+    background-color: var(--theme-accent) !important;
+}
+
+/* Accent borders */
+body[data-theme] .border-indigo-500,
+body[data-theme] .border-indigo-600,
+body[data-theme] .border-purple-500,
+body[data-theme] .border-purple-600 {
+    border-color: var(--theme-accent) !important;
+}
+
+/* Accent rings */
+body[data-theme] .ring-indigo-500,
+body[data-theme] .ring-indigo-600 {
+    --tw-ring-color: var(--theme-accent) !important;
+}
+
+/* Accent shadows */
+body[data-theme] [class*="shadow-indigo"],
+body[data-theme] [class*="shadow-purple"] {
+    --tw-shadow-color: color-mix(
+        in srgb,
+        var(--theme-accent) 30%,
+        transparent
+    ) !important;
+}
+
+
+/* =========================================================
+   ORANGE/AMBER ACCENTS → THEME ACCENT
+   ========================================================= */
+
+body[data-theme] .text-orange-400,
+body[data-theme] .text-orange-500,
+body[data-theme] .text-orange-600,
+body[data-theme] .text-amber-400,
+body[data-theme] .text-amber-500,
+body[data-theme] .text-amber-600 {
+    color: var(--theme-accent) !important;
+}
+
+
+/* =========================================================
+   PINK ACCENTS → THEME ACCENT
+   ========================================================= */
+
+body[data-theme] .text-pink-400,
+body[data-theme] .text-pink-500,
+body[data-theme] .text-pink-600,
+body[data-theme] .text-rose-400,
+body[data-theme] .text-rose-500,
+body[data-theme] .text-rose-600 {
+    color: var(--theme-accent) !important;
+}
+
+
+/* =========================================================
+   EMERALD ACCENTS → THEME ACCENT
+   ========================================================= */
+
+body[data-theme] .text-emerald-400,
+body[data-theme] .text-emerald-500,
+body[data-theme] .text-emerald-600 {
+    color: var(--theme-accent) !important;
+}
+
+
+/* =========================================================
+   DARK THEME TEXT SAFETY
+   ========================================================= */
+
+body[data-theme="green"] .text-slate-700,
+body[data-theme="dark"] .text-slate-700,
+body[data-theme="purple"] .text-slate-700,
+body[data-theme="orange"] .text-slate-700 {
+    color: var(--theme-text) !important;
+}
+
+body[data-theme="green"] .text-slate-800,
+body[data-theme="dark"] .text-slate-800,
+body[data-theme="purple"] .text-slate-800,
+body[data-theme="orange"] .text-slate-800 {
+    color: var(--theme-text) !important;
+}
+
+
+/* =========================================================
+   DARK THEME BORDERS
+   ========================================================= */
+
+body[data-theme] .border-slate-100,
+body[data-theme] .border-slate-200,
+body[data-theme] .border-slate-300 {
+    border-color: var(--theme-border) !important;
+}
+
+/* =========================================================
+   AUTOMATIC SYSTEM DARK THEME
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    /* Main page */
+    body {
+        background: #0f172a !important;
+        color: #f8fafc !important;
+    }
+
+    /* =====================================================
+       GOALS PAGE
+       ===================================================== */
+
+    #goals-page,
+    #goals,
+    [id*="goal"],
+    [id*="markmið"] {
+        color: #f8fafc !important;
+    }
+
+    /*
+       The minute-goal container was:
+       bg-white/50
+    */
+    #goals-page .bg-white\/50,
+    #goals .bg-white\/50,
+    [id*="goal"] .bg-white\/50,
+    [id*="markmið"] .bg-white\/50 {
+        background: #1e293b !important;
+        border-color: #334155 !important;
+    }
+
+    /* Goal cards */
+    #goals-page .bg-white,
+    #goals .bg-white,
+    [id*="goal"] .bg-white,
+    [id*="markmið"] .bg-white {
+        background: #1e293b !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    /* Inputs */
+    #goals-page input,
+    #goals-page select,
+    #goals input,
+    #goals select,
+    [id*="goal"] input,
+    [id*="goal"] select,
+    [id*="markmið"] input,
+    [id*="markmið"] select {
+        background: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    /* Input placeholder */
+    #goals-page input::placeholder,
+    #goals input::placeholder,
+    [id*="goal"] input::placeholder,
+    [id*="markmið"] input::placeholder {
+        color: #94a3b8 !important;
+    }
+
+    /* Select options */
+    #goals-page option,
+    #goals option,
+    [id*="goal"] option,
+    [id*="markmið"] option {
+        background: #0f172a !important;
+        color: #f8fafc !important;
+    }
+
+    /* Goal headings */
+    #goals-page .text-slate-900,
+    #goals .text-slate-900,
+    [id*="goal"] .text-slate-900,
+    [id*="markmið"] .text-slate-900 {
+        color: #f8fafc !important;
+    }
+
+    /* Goal secondary text */
+    #goals-page .text-slate-500,
+    #goals-page .text-slate-600,
+    #goals .text-slate-500,
+    #goals .text-slate-600,
+    [id*="goal"] .text-slate-500,
+    [id*="goal"] .text-slate-600,
+    [id*="markmið"] .text-slate-500,
+    [id*="markmið"] .text-slate-600 {
+        color: #94a3b8 !important;
+    }
+
+    /* Goal progress background */
+    #minutes-goal-progress-container .bg-slate-200 {
+        background: #334155 !important;
+    }
+
+    /* =====================================================
+       REMOVE PURPLE / INDIGO GRADIENTS
+       ===================================================== */
+
+    #streak-banner,
+    .bg-gradient-to-br.from-indigo-500,
+    .bg-gradient-to-br.from-violet-500,
+    .bg-gradient-to-br.from-pink-500,
+    [class*="from-indigo-600"],
+    [class*="from-violet-600"],
+    [class*="to-purple-600"] {
+        background: #1e293b !important;
+        background-image: none !important;
+    }
+
+    /* Timer */
+    #timer-widget {
+        background: #1e293b !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    /* Recommendation modal */
+    #recommend-modal-content,
+    #recommend-modal-content .bg-white,
+    #recommend-modal-content .bg-slate-50 {
+        background: #1e293b !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    #recommend-modal-content input,
+    #recommend-modal-content textarea {
+        background: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    /* General white surfaces */
+    .glass-card {
+        background: #1e293b !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    /* White text remains white */
+    .text-white {
+        color: #ffffff !important;
+    }
+}
+
+
+/* =========================================================
+   LIGHT SYSTEM THEME
+   ========================================================= */
+
+@media (prefers-color-scheme: light) {
+
+    body {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    /* ==========================================
+       MÍNÚTUMARKMIÐ — WHOLE CARD
+       ========================================== */
+
+    #target-minutes-input,
+    #goal-type-select {
+
+        background-color: #0f172a !important;
+        background: #0f172a !important;
+
+        color: #f8fafc !important;
+
+        border-color: #334155 !important;
+    }
+
+
+    /* The container directly holding the minute goal */
+
+    #target-minutes-input {
+        color-scheme: dark;
+    }
+
+    #goal-type-select {
+        color-scheme: dark;
+    }
+
+
+    /* Find the card containing the minute input */
+
+    #target-minutes-input {
+        /* Makes the input itself dark */
+        background: #0f172a !important;
+    }
+
+
+    /* Labels */
+
+    #target-minutes-input ~ * {
+        color: #f8fafc !important;
+    }
+
+
+    /* Progress section */
+
+    #minutes-goal-progress-container {
+        color: #f8fafc !important;
+    }
+
+    #minutes-goal-progress-container
+    .text-slate-600 {
+        color: #cbd5e1 !important;
+    }
+
+    #minutes-goal-progress-container
+    .text-slate-400 {
+        color: #94a3b8 !important;
+    }
+
+
+    /* Progress background */
+
+    #minutes-goal-bar {
+        background: #6366f1 !important;
+    }
+
+
+    /* The white-ish backgrounds around the goal */
+
+    #target-minutes-input,
+    #goal-type-select {
+        box-shadow: none !important;
+    }
+
+
+    /* Personal goal input */
+
+    #personal-goal-input {
+        background: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    #personal-goal-input::placeholder {
+        color: #64748b !important;
+    }
+
+
+    /* Personal goal cards */
+
+    #personal-goals-list > div {
+        background: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+
+    /* ==========================================
+       FIND THE MINUTE-GOAL CARD
+       ========================================== */
+
+    /* The card containing #target-minutes-input */
+
+    #target-minutes-input {
+        border-radius: 1rem !important;
+    }
+
+    /*
+       Tailwind bg-white/50 generates an rgba white
+       background. Override it globally inside goals.
+    */
+
+    #goals-page .bg-white\/50,
+    #goals .bg-white\/50 {
+        background-color: #1e293b !important;
+        background: #1e293b !important;
+        border-color: #334155 !important;
+    }
+
+
+    /* Make text inside the card readable */
+
+    #goals-page .bg-white\/50 label,
+    #goals .bg-white\/50 label {
+        color: #94a3b8 !important;
+    }
+
+
+    /* Dropdown arrow / native controls */
+
+    #goal-type-select option {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+    }
+}
+
+/* =========================================================
+   BOOKS / MY READING NAVIGATION
+   ========================================================= */
+
+/*
+   Original:
+   bg-slate-200/50
+
+   This is the grey transparent pill surrounding:
+   Bækur | Lesturinn minn
+*/
+
+body[data-theme] #nav-library,
+body[data-theme] #nav-stats {
+    color: var(--theme-text) !important;
+}
+
+/* The exact navigation container */
+body[data-theme] #nav-library + #nav-stats {
+    /* Buttons themselves are handled below */
+}
+
+/*
+   Select the parent containing the navigation buttons.
+   :has() is supported by modern Firefox/Chrome.
+*/
+body[data-theme] nav:has(#nav-library):has(#nav-stats) > div:last-child {
+    background: var(--theme-card) !important;
+    background-color: var(--theme-card) !important;
+    border: 1px solid var(--theme-border) !important;
+    box-shadow: none !important;
+}
+
+/* Bækur — active button */
+body[data-theme] #nav-library {
+    background: var(--theme-surface) !important;
+    color: var(--theme-accent) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* Lesturinn minn — inactive button */
+body[data-theme] #nav-stats {
+    background: transparent !important;
+    color: var(--theme-muted) !important;
+}
+
+/* Hover */
+body[data-theme] #nav-stats:hover {
+    background: var(--theme-surface) !important;
+    color: var(--theme-accent) !important;
+}
+
+/* When stats is active */
+body[data-theme] #nav-stats.active {
+    background: var(--theme-surface) !important;
+    color: var(--theme-accent) !important;
+}
+
+/* When library is inactive */
+body[data-theme] #nav-library:not(.active) {
+    background: transparent !important;
+    color: var(--theme-muted) !important;
+}
+
+/* Remove the original white shadow */
+body[data-theme] #nav-library,
+body[data-theme] #nav-stats {
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   ALSO FIX OTHER SLATE TRANSPARENT BACKGROUNDS
+   ========================================================= */
+
+/* Search bar */
+body[data-theme] #book-search {
+    background-color: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* Search placeholder */
+body[data-theme] #book-search::placeholder {
+    color: var(--theme-muted) !important;
+}
+
+
+/* =========================================================
+   MINUTE GOAL
+   ========================================================= */
+
+body[data-theme] .bg-white\/50 {
+    background: var(--theme-card) !important;
+    background-color: var(--theme-card) !important;
+}
+
+body[data-theme] #target-minutes-input,
+body[data-theme] #goal-type-select {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] #goal-type-select option {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+}
+
+body[data-theme] #personal-goal-input {
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+body[data-theme] #minutes-goal-progress-container .bg-slate-200 {
+    background: var(--theme-border) !important;
+}
+
+body[data-theme] #minutes-goal-bar {
+    background: var(--theme-accent) !important;
+}
+
+/* Navigation container: remove the grey transparent background */
+body[data-theme] nav .bg-slate-200\/50 {
+    background: var(--theme-card) !important;
+    border: 1px solid var(--theme-border) !important;
+    color: var(--theme-text) !important;
+}
+
+/* Keep the selected page indicator visible */
+body[data-theme] nav #nav-library.bg-white,
+body[data-theme] nav #nav-stats.bg-white {
+    background: var(--theme-surface) !important;
+    color: var(--theme-accent) !important;
+    box-shadow: 0 4px 12px color-mix(
+        in srgb,
+        var(--theme-accent) 15%,
+        transparent
+    ) !important;
+}
+
+/* Unselected navigation button */
+body[data-theme] nav #nav-library:not(.bg-white),
+body[data-theme] nav #nav-stats:not(.bg-white) {
+    background: transparent !important;
+    color: var(--theme-muted) !important;
+}
+
+/* Hover */
+body[data-theme] nav #nav-library:hover,
+body[data-theme] nav #nav-stats:hover {
+    color: var(--theme-accent) !important;
+}
+
+/* =========================================================
+   ÚTLIT NAVIGATION BUTTON
+   ========================================================= */
+
+body[data-theme] #nav-appearance {
+    background: transparent !important;
+    color: var(--theme-muted) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+body[data-theme] #nav-appearance:hover {
+    background: var(--theme-surface) !important;
+    color: var(--theme-accent) !important;
+}
+
+body[data-theme] #nav-appearance .fa-palette {
+    color: var(--theme-accent) !important;
+}
+
+
+/* =========================================================
+   APPEARANCE DROPDOWN
+   ========================================================= */
+
+body[data-theme] #appearance-panel {
+    position: fixed !important;
+
+    top: 82px !important;
+    right: 24px !important;
+
+    width: 280px !important;
+
+    padding: 18px !important;
+
+    background: var(--theme-surface) !important;
+    color: var(--theme-text) !important;
+
+    border: 1px solid var(--theme-border) !important;
+    border-radius: 20px !important;
+
+    box-shadow:
+        0 20px 60px -20px
+        color-mix(
+            in srgb,
+            var(--theme-accent) 30%,
+            transparent
+        ) !important;
+
+    z-index: 1000 !important;
+}
+
+
+/* =========================================================
+   THEME OPTIONS
+   ========================================================= */
+
+body[data-theme] #appearance-panel .theme-option {
+    width: 100% !important;
+
+    background: var(--theme-card) !important;
+    color: var(--theme-text) !important;
+
+    border: 1px solid var(--theme-border) !important;
+}
+
+body[data-theme] #appearance-panel .theme-option:hover {
+    border-color: var(--theme-accent) !important;
+    color: var(--theme-accent) !important;
+}
+
+body[data-theme] #appearance-panel .theme-option.active {
+    border-color: var(--theme-accent) !important;
+    color: var(--theme-accent) !important;
+
+    box-shadow:
+        0 0 0 2px
+        color-mix(
+            in srgb,
+            var(--theme-accent) 20%,
+            transparent
+        ) !important;
+}
+
+/* =========================================================
+   GEFÐU BÓKINNI STJÖRNUGJÖF
+   ========================================================= */
+
+/* Rating containers */
+body[data-theme] [id*="rating"],
+body[data-theme] [class*="rating"] {
+    color: var(--theme-text) !important;
+    border-color: var(--theme-border) !important;
+}
+
+/* Remove white / transparent white backgrounds */
+body[data-theme] [id*="rating"] .bg-white,
+body[data-theme] [id*="rating"] .bg-white\/50,
+body[data-theme] [id*="rating"] .bg-white\/70,
+body[data-theme] [id*="rating"] .bg-white\/80,
+body[data-theme] [id*="rating"] .bg-white\/90,
+body[data-theme] [class*="rating"] .bg-white,
+body[data-theme] [class*="rating"] .bg-white\/50,
+body[data-theme] [class*="rating"] .bg-white\/70,
+body[data-theme] [class*="rating"] .bg-white\/80,
+body[data-theme] [class*="rating"] .bg-white\/90 {
+    background: var(--theme-card) !important;
+    background-color: var(--theme-card) !important;
+}
+
+/* Rating headings */
+body[data-theme] [id*="rating"] .text-slate-900,
+body[data-theme] [id*="rating"] .text-slate-800,
+body[data-theme] [id*="rating"] .text-slate-700,
+body[data-theme] [class*="rating"] .text-slate-900,
+body[data-theme] [class*="rating"] .text-slate-800,
+body[data-theme] [class*="rating"] .text-slate-700 {
+    color: var(--theme-text) !important;
+}
+
+/* Rating secondary text */
+body[data-theme] [id*="rating"] .text-slate-500,
+body[data-theme] [id*="rating"] .text-slate-600,
+body[data-theme] [class*="rating"] .text-slate-500,
+body[data-theme] [class*="rating"] .text-slate-600 {
+    color: var(--theme-muted) !important;
+}
+
+/* Stars */
+body[data-theme] [id*="rating"] .text-yellow-400,
+body[data-theme] [id*="rating"] .text-yellow-500,
+body[data-theme] [id*="rating"] .text-amber-400,
+body[data-theme] [id*="rating"] .text-amber-500,
+body[data-theme] [class*="rating"] .text-yellow-400,
+body[data-theme] [class*="rating"] .text-yellow-500,
+body[data-theme] [class*="rating"] .text-amber-400,
+body[data-theme] [class*="rating"] .text-amber-500 {
+    color: var(--theme-accent) !important;
+}
+
+/* Rating borders */
+body[data-theme] [id*="rating"] *,
+body[data-theme] [class*="rating"] * {
+    border-color: var(--theme-border);
+}
+
+/* Recommendation modal window */
+.recommend-modal-window {
+    border: 2px solid rgba(99, 102, 241, 0.45);
+    box-shadow:
+        0 0 25px rgba(99, 102, 241, 0.25),
+        0 0 60px rgba(99, 102, 241, 0.12),
+        0 25px 60px rgba(0, 0, 0, 0.20);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Light */
+[data-theme="light"] .recommend-modal-window {
+    border-color: rgba(99, 102, 241, 0.35);
+    box-shadow:
+        0 0 25px rgba(99, 102, 241, 0.20),
+        0 0 60px rgba(99, 102, 241, 0.10),
+        0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Green */
+[data-theme="green"] .recommend-modal-window {
+    border-color: rgba(34, 197, 94, 0.50);
+    box-shadow:
+        0 0 25px rgba(34, 197, 94, 0.30),
+        0 0 60px rgba(34, 197, 94, 0.15),
+        0 25px 60px rgba(0, 0, 0, 0.30);
+}
+
+/* Dark */
+[data-theme="dark"] .recommend-modal-window {
+    border-color: rgba(129, 140, 248, 0.55);
+    box-shadow:
+        0 0 25px rgba(129, 140, 248, 0.35),
+        0 0 70px rgba(129, 140, 248, 0.18),
+        0 25px 60px rgba(0, 0, 0, 0.50);
+}
+
+/* Purple */
+[data-theme="purple"] .recommend-modal-window {
+    border-color: rgba(168, 85, 247, 0.55);
+    box-shadow:
+        0 0 25px rgba(168, 85, 247, 0.35),
+        0 0 70px rgba(168, 85, 247, 0.18),
+        0 25px 60px rgba(0, 0, 0, 0.50);
+}
+
+/* Orange */
+[data-theme="orange"] .recommend-modal-window {
+    border-color: rgba(249, 115, 22, 0.55);
+    box-shadow:
+        0 0 25px rgba(249, 115, 22, 0.35),
+        0 0 70px rgba(249, 115, 22, 0.18),
+        0 25px 60px rgba(0, 0, 0, 0.50);
+}
